@@ -1,0 +1,88 @@
+body {
+  background-color: beige;
+}
+
+.main-title {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.highlight {
+  color:green;
+  font-weight: bold;
+}
+
+.container {
+  background-color: lightgray;
+}
+
+#unique {
+  color: orange;
+}
+
+.special {
+  color: blue;
+}
+
+.bg-green {
+  background-color: rgb(10, 78, 10);
+}
+
+.important-text {
+  color: yellow !important;
+}
+
+.container p {
+  text-decoration: underline;
+}
+
+.container > ul {
+  color: red;
+}
+
+input[type="text"] {
+  border: 2px solid red;
+}
+
+p::first-letter {
+  font-size: 24px;
+}
+
+h2::before {
+  content:"@";
+  color:gold
+}
+
+h2::after {
+  content: "$";
+  color: red;
+}
+
+ul li:first-child {
+  color:green;
+  font-weight: bold;
+  background-color: antiquewhite;
+}
+
+ul li:last-child {
+  color:red;
+  background-color: purple;
+}
+
+ul li:nth-child(odd) {
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: orange;
+  cursor: pointer;
+} 
+
+.border-red {
+  /* border: 2px solid red;  */
+  /* border-bottom: 2px solid red; */
+  border-width: 4px;
+  border-style: dotted;
+  border-color: red;
+
+}

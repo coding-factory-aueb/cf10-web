@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    h1 {
+      color: red;
+      /* background-color: green; */
+    }
+  </style>
+  <link rel="stylesheet" href="./css/2-CSS-basic-style.css">
+</head>
+<body>
+  <h1 class="main-title bg-green border-red">CSS Introduction Example</h1>
+  <!-- My div container -->
+  <div class="container">
+    <p style="color:red; background-color: aqua;">
+      this paragraph uses INLINE CSS
+    </p>
+
+    <p>
+      this paragraph uses INTERNAL CSS
+    </p>
+
+    <p class="highlight">
+      this text uses a class selector
+    </p>
+
+    <p id="unique">
+      this text uses an ID selector
+    </p>
+
+    <p class="special">
+      Specificity example with CLASS Selector
+    </p>
+
+    <p id="unique" class="specia" style="color:red">
+      ID and Class name the winner is: id
+    </p>
+
+    <p class="important-text" style="color:red">
+      !Important styling
+    </p>
+
+    <h2 class="bg-green">Lists and CSS</h2>
+    <ul class="list-lesson">
+      <li>CSS</li>
+      <li>HTML
+        <ul>
+          <li>Tables</li>
+          <li>Forms</li>
+          <li>paragraph</li>
+        </ul>
+      </li>
+      <li>Javascript</li>
+    </ul>
+
+    <h2>Forms</h2>
+
+    <input type="text" placeholder="type something">
+    <br>
+    <input type="password" >
+
+    <br>
+    <button>Hover me</button>
+  </div>
+</body>
+</html>

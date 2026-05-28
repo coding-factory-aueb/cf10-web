@@ -121,23 +121,77 @@
 
   <h2>Φόρμα Επικοινωνίας</h2>
 
-  <form>
-    <p>
-      <label for="fldFullname">Ονοματεπώνυμο:</label>
-      <br>
-      <input type="text" name="fullname" id="fldFullname">
-    </p>
+  <form id="myForm">
+    <fieldset>
+      <legend>Personal Info</legend>    
+      <p>
+        <label for="fldFullname">Ονοματεπώνυμο:</label>
+        <br>
+        <input type="text" name="fullname" id="fldFullname" placeholder="Full Name">
+      </p>
 
-    <p>
-      <label for="">Email:</label>
-      <br>
-      <input type="email" name="email">
-    </p>
+      <p>
+        <label for="">Email:</label>
+        <br>
+        <input type="email" name="email">
+      </p>
 
-    <p>
-      <label>Κωδικός:</label><br>
-      <input type="password">
-    </p>
+      <p>
+        <label>Κωδικός:</label><br>
+        <input type="password">
+      </p>
+
+      <p>
+        <label for="fldAge">Age:</label>
+        <input type="number" id="fldAge" min="20" max="40">
+      </p>
+
+      <p>
+        <label for="fldBirthday">Birthday:</label>
+        <input type="date" name="birthday" id="fldBirthday">
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Other Data</legend>
+      <p>SEX
+        <br>
+
+        <input type="radio" name="gender" id="fldMale" value="male">
+        <label for="fldMale">Man</label>
+        
+        <br>
+
+        <input type="radio" name="gender" id="fldFemale" value="female">
+        <label for="fldFemale">Woman</label>
+      </p>
+
+      <p>Coding
+        <br>
+
+        <input type="checkbox" id="fldHtml" value="html">
+        <label for="fldHtml">HTML</label>
+
+        <br>
+        <input type="checkbox" id="fldCSS" value="css">
+        <label for="fldCSS">CSS</label>
+      </p>
+
+      <p>
+        <label for="fldCity">City</label>
+        <select id="fldCity" required>
+          <option value="" selected disabled>Choose City</option>
+          <option value="athens">Athens</option>
+          <option value="london">London</option>
+        </select>
+      </p>
+
+      <p>
+        <textarea rows="5" cols="40" placeholder="Data ...."></textarea>
+      </p>
+    </fieldset>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
   </form>
 </body>
 </html>
