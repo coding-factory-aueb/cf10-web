@@ -112,3 +112,39 @@ th {
   background-color: #1e3a5f;
   color: white;
 }
+
+/* Display */
+
+.block-example {
+  background-color: lightblue;
+}
+
+.inline-example {
+  background-color: pink;
+  /* display: block; */
+}
+
+.inline-block-example {
+  background-color: lightskyblue;
+  display: inline-block;
+  width: 150px;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a5f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.text-yellow {
+  color: yellow;
+  font-size: 60px;
+}
+
+.text-pink {
+  color:green;
+  font-size: 50px;
+}
