@@ -1,0 +1,25 @@
+:root {
+  --gov-blue: #003475;
+  --blue: #083aa9;
+  --green: #006736;
+  --lightgrey-300:#cdccce;
+}
+
+
+/* Header Styling */
+.bg-gov {
+  background-color: var(--gov-blue);
+}
+
+.border-bottom-gov {
+  border-color: var(--blue)!important;
+}
+
+/* Footer Styling */
+.bg-footer {
+  background-color: var(--lightgrey-300);
+}
+
+.border-top-gov {
+  border-color: var(--blue)!important;
+}
