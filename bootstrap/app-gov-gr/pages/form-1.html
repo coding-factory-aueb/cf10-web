@@ -21,335 +21,206 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-
-    <div>
-
-      <div>
-
+  <header class="bg-gov border-bottom border-5 border-bottom-gov">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- Logo -->
         <div>
           <img src="../images/gov_gr-thumb-540.png" alt="gov" style="height:100px;">
         </div>
 
+        <!-- Navigation -->
         <nav>
-
-          <ul>
-
+          <ul class="d-flex align-items-center gap-4 list-unstyled">
             <li>
-              <span>
-                <i></i>
+              <span class="border border-white rounded p-2 text-white">
+                <i class="fa-solid fa-bars"></i>
               </span>
             </li>
-
             <li>
-
-              ΜΕΝΕΛΑΟΣ ΓΟΥΛΑΝΔΡΗΣ
-
-              <span>
-                <i></i>
+              <span class="text-white">
+                ΜΕΝΕΛΑΟΣ ΓΟΥΛΑΝΔΡΗΣ
               </span>
-
+              <span class="text-white ms-2">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
             </li>
-
           </ul>
-
         </nav>
-
       </div>
-
     </div>
-
   </header>
 
   <!-- CONTENT -->
-  <div>
-
-    <div>
-
+  <div class="container-fluid">
+    <div class="row">
       <!-- SIDEBAR -->
-      <aside>
-
+      <aside class="bg-gov col-md-3 col-lg-2 text-white">
         <p>
-          <i></i>
-          <a href="../index.html">
+          <i class="fa-solid fa-house"></i>
+          <a class="text-white text-decoration-none" href="../index.html">
             Αρχική
           </a>
         </p>
-
         <p>
-          <i></i>
+          <i class="fa-solid fa-chevron-down"></i>
           Δηλώσεις Καθαρισμού
         </p>
-
-        <p>
-          Προβολή Δηλώσεων
-        </p>
-
-        <p>
-          Υποβολή Δήλωσης
-        </p>
-
+        <p class="ps-3 small">Προβολή Δηλώσεων</p>
+        <p class="ps-3 small text-warning">Υποβολή Δήλωσης</p>
       </aside>
 
       <!-- MAIN -->
-      <main>
+      <main class="col-md-9 col-lg-10 p-4">
 
         <!-- STEPPER -->
         <section>
-
-          <h1>
+          <h1 class="text-center mb-5">
             Υποβολή Δήλωσης Καθαρισμού Οικοπέδου
           </h1>
-
-          <div>
-
-            <div>
-
-              <div>
-                1
-              </div>
-
-              <p>
-                Στοιχεία Οικοπέδου
-              </p>
-
+          <div class="row text-center align-items-center ">
+            <div class="col">
+              <div class="stepper active-step mx-auto">1</div>
+              <p>Στοιχεία Οικοπέδου</p>
             </div>
 
-            <div>
-              <hr>
+            <div class="col"><hr></div>
+
+            <div class="col">
+              <div class="stepper mx-auto">2</div>
+              <p>Στοιχεία Ιδιοκτήτη</p>
             </div>
 
-            <div>
+            <div class="col"><hr></div>
 
-              <div>
-                2
-              </div>
-
-              <p>
-                Στοιχεία Ιδιοκτήτη
-              </p>
-
+            <div class="col">
+              <div class="stepper mx-auto">3</div>
+              <p>Ενέργειες Πυρασφάλειας</p>
             </div>
-
-            <div>
-              <hr>
-            </div>
-
-            <div>
-
-              <div>
-                3
-              </div>
-
-              <p>
-                Ενέργειες Πυρασφάλειας
-              </p>
-
-            </div>
-
           </div>
-
         </section>
 
         <!-- FORM -->
-        <section>
+        <section class="mt-4">
 
-          <h2>
+          <h2 class="text-center">
             Στοιχεία Οικοπέδου
           </h2>
 
-          <div>
-            Παρακαλώ εισάγεται στοιχεία οικοπέδου
+          <div class="alert alert-secondary">
+            Παρακαλώ εισάγετε στοιχεία οικοπέδου
           </div>
 
           <form>
 
             <!-- Radio -->
             <div>
+              <label class="fw-bold">Εντοπισμός οικοπέδου:</label>
 
-              <label>
-                Εντοπισμός οικοπέδου:
-              </label>
-
-              <div>
-
-                <input type="radio" name="fieldRadio" checked>
-
-                <label>
-                  ΚΑΕΚ
-                </label>
-
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="fieldRadio" checked>
+                <label class="form-check-label">ΚΑΕΚ</label>
               </div>
 
-              <div>
-
-                <input type="radio" name="fieldRadio">
-
-                <label>
-                  Συντεταγμένες(x,y)
-                </label>
-
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="fieldRadio">
+                <label class="form-check-label">Συντεταγμένες(x,y)</label>
               </div>
-
             </div>
 
             <!-- KAEK -->
-            <div>
-
-              <label>
-                KAEK
-              </label>
-
-              <input type="text">
-
-              <div>
-                Εισάγεται το ΚΑΕΚ του οικοπέδου
-              </div>
-
+            <div class="mt-4">
+              <label class="form-label">KAEK</label>
+              <input class="form-control" type="text">
+              <div class="form-text">Εισάγεται το ΚΑΕΚ του οικοπέδου</div>
             </div>
 
             <!-- ROW -->
-            <div>
+            <div class="row mt-4">
 
-              <div>
-
-                <label>
-                  Νομός
-                </label>
-
-                <select>
-
+              <div class="col-md-6">
+                <label class="form-label">Νομός</label>
+                <select class="form-select">
                   <option>Χανίων</option>
                   <option>Αττικής</option>
                   <option>Ιωαννίνων</option>
-
                 </select>
-
               </div>
 
-              <div>
-
-                <label>
-                  Δήμος
-                </label>
-
-                <select>
-
+              <div class="col-md-6">
+                <label class="form-label">Δήμος</label>
+                <select class="form-select">
                   <option>Δήμος 1</option>
                   <option>Δήμος 2</option>
-
                 </select>
-
               </div>
-
             </div>
 
             <!-- TEXT INPUTS -->
-            <div>
+            <div class="row mt-4">
 
-              <div>
-
-                <input type="text" placeholder="Δημοτική Ενότητα">
-
+              <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Δημοτική Ενότητα">
               </div>
 
-              <div>
-
-                <input type="text" placeholder="Οικισμός">
-
+              <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Οικισμός">
               </div>
-
             </div>
 
             <!-- ADDRESS -->
-            <div>
-
-              <div>
-
-                <label>
-                  Οδός
-                </label>
-
-                <input type="text">
-
+            <div class="row mt-4">
+              <div class="col-md-4">
+                <label class="form-label">Οδός</label>
+                <input class="form-control" type="text">
               </div>
 
-              <div>
-
-                <label>
-                  Αριθμός
-                </label>
-
-                <input type="text">
-
+              <div class="col-md-4">
+                <label class="form-label">Αριθμός</label>
+                <input class="form-control" type="text">
               </div>
 
-              <div>
-
-                <label>
-                  Τ.Κ
-                </label>
-
-                <input type="text">
-
+              <div class="col-md-4">
+                <label class="form-label">Τ.Κ</label>
+                <input class="form-control" type="text">
               </div>
-
             </div>
 
             <!-- BUTTON -->
-            <div>
-
-              <a href="./form-2.html">
+            <div class="mt-4 text-end">
+              <a class="btn btn-success" role="button" href="./form-2.html">
                 Επόμενο
-                <i></i>
+                <i class="fa-solid fa-chevron-right"></i>
               </a>
-
             </div>
-
           </form>
-
         </section>
-
       </main>
-
     </div>
-
   </div>
 
   <!-- FOOTER -->
-  <footer>
-
-    <div>
-
-      <div>
-
-        <div>
-
+  <footer class="bg-footer border-top border-5 border-top-gov mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 py-4">
           <p>
             <a href="#">
               Όροι και προϋποθέσεις
             </a>
           </p>
-
           <p>
             Υλοποίηση για το
             <a href="#">
               Υπουργείο Ψηφιακής Διακυβέρνησης
             </a>
           </p>
-
         </div>
-
-        <div>
-
-          <img src="../images/government-logo2.svg" alt="gov" style="height:75px;">
-
+        <div class="col-md-6 py-4  text-md-end text-center">
+          <img src="../images/government-logo2.svg" alt="gov logo" style="height:75px;">
         </div>
-
       </div>
-
     </div>
-
   </footer>
 
   <!-- Bootstrap -->

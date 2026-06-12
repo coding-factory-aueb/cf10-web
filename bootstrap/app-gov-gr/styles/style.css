@@ -23,3 +23,19 @@
 .border-top-gov {
   border-color: var(--blue)!important;
 }
+
+/* Styling Stepper */
+.stepper {
+  width:40px;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+}
+
+.active-step {
+  background-color: var(--gov-blue);
+  color: white;
+}
