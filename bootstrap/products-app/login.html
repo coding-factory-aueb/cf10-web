@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Σύνδεση</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">MyShop</a>
+    
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navMenu" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Αρχική</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Σύνδεση</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Προϊόντα</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">Άλλα</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Πληροφορίες</a></li>
+            <li><a class="dropdown-item" href="#">Επικοινωνία</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="min-vh-100 container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+
+      <div class="card shadow">
+        <div class="card-body">
+
+          <h3 class="text-center mb-4">Σύνδεση</h3>
+
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input class="form-control" type="email" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Κωδικός</label>
+              <input class="form-control" type="password" required>
+            </div>
+
+            <button class="btn btn-primary w-100">Είσοδος</button>
+          </form>
+
+          <div class="text-center mt-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#forgotModal">Ξέχασα τον κωδικό</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="forgotModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Ανάκτηση Κωδικού</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <label class="form-label">Email</label>
+        <input class="form-control" type="email">
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Κλείσιμο</button>
+        <button class="btn btn-primary">Αποστολή</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  © 2026 MyShop — All rights reserved
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
