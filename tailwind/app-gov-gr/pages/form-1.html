@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Στοιχεία Οικοπέδου</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme{
+      --color-gov:#003475;
+      --color-bluegov: #083AA9;
+      --color-govgreen: #006736;
+      --color-lightgrey-300: #cdccce;
+    }
+
+    .stepper {
+      @apply w-10 h-10 rounded-full bg-lightgrey-300 text-white flex items-center justify-center font-bold;
+    }
+
+    .active-step {
+      @apply bg-blue-600;
+    }
+  </style>
+
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="bg-gov border-b-4 border-bluegov">
+    <div class="w-full px-4">
+      <div class="flex justify-between items-center py-2">
+
+        <img class="h-24 w-auto" src="../images/gov_gr-thumb-540.png" alt="gov">
+
+        <nav>
+          <ul class="flex items-center gap-6 text-white">
+            <li>
+              <span class="border border-white rounded p-2">
+                <i class="fa-solid fa-bars"></i>
+              </span>
+            </li>
+
+            <li>
+              <span>ΜΕΝΕΛΑΟΣ ΓΟΥΛΑΝΔΡΗΣ</span>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="flex">
+
+    <aside class="w-64 bg-gov text-white p-4 min-h-screen">
+
+      <p class="mb-4">
+        <i class="fa-solid fa-house"></i>
+        <a href="../index.html" class="text-white hover:underline">
+          Αρχική
+        </a>
+      </p>
+
+      <p class="mb-2">
+        <i class="fa-solid fa-chevron-down"></i>
+        Δηλώσεις Καθαρισμού
+      </p>
+
+      <p class="ml-4 text-sm">Προβολή Δηλώσεων</p>
+      <p class="ml-4 text-sm text-yellow-400">Υποβολή Δήλωσης</p>
+
+    </aside>
+
+    <main class="flex-1 p-6">
+
+      <section>
+
+        <h1 class="text-center text-2xl font-semibold mb-8">
+          Υποβολή Δήλωσης Καθαρισμού Οικοπέδου
+        </h1>
+
+        <div class="grid grid-cols-5 items-center text-center mb-10">
+
+          <div>
+            <div class="stepper active-step mx-auto">1</div>
+            <p>Στοιχεία Οικοπέδου</p>
+          </div>
+
+          <div><hr></div>
+
+          <div>
+            <div class="stepper mx-auto">2</div>
+            <p>Στοιχεία Ιδιοκτήτη</p>
+          </div>
+
+          <div><hr></div>
+
+          <div>
+            <div class="stepper mx-auto">3</div>
+            <p>Ενέργειες Πυρασφάλειας</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2 class="text-center text-xl font-semibold mb-4">
+          Στοιχεία Οικοπέδου
+        </h2>
+
+        <div class="bg-gray-200 text-gray-800 rounded mb-6 p-3">
+          Παρακαλώ εισάγεται στοιχεία οικοπέδου
+        </div>
+
+        <form >
+
+          <div class="mb-4">
+            <label class="font-bold">Εντοπισμός οικοπέδου:</label>
+
+            <label class="mr-4">
+              <input class="mr-2" type="radio" name="fieldRadio" checked>
+              ΚΑΕΚ
+            </label>
+
+            <label>
+              <input class="mr-2" type="radio" name="fieldRadio">
+              Συντεταγμένες (x,y)
+            </label>
+          </div>
+
+          <div class="mb-4">
+            <label class="block mb-1">KAEK</label>
+            <input class="border border-gray-300 rounded p-2 w-full" type="text">
+            <p class="text-sm text-gray-800 mt-1">Εισάγεται το ΚΑΕΚ του οικοπέδου</p>
+          </div>
+
+          <div class="grid grid-cols-1 md: grid-cols-2 gap-6 mb-4">
+
+            <div>
+              <label class="block mb-1">Νομός</label>
+              <select class="border border-gray-300 rounded p-2 w-full">
+                <option>Χανίων</option>
+                <option>Αττικής</option>
+                <option>Ιωαννίνων</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block mb-1">Δήμος</label>
+              <select class="border border-gray-300 rounded p-2 w-full">
+                <option>Δήμος 1</option>
+                <option>Δήμος 2</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+
+            <input class="border border-gray-300 rounded p-2 w-full" type="text" placeholder="Δημοτική Ενότητα">
+            <input class="border border-gray-300 rounded p-2 w-full" type="text" placeholder="Οικισμός">
+
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+
+            <div>
+              <label class="block mb-1">Οδός</label>
+              <input class="border border-gray-300 rounded p-2 w-full" type="text">
+            </div>
+
+            <div>
+              <label class="block mb-1">Αριθμός</label>
+              <input class="border border-gray-300 rounded p-2 w-full" type="text">
+            </div>
+
+            <div>
+              <label class="block mb-1">Τ.Κ</label>
+              <div class="flex">
+                <span class="bg-gray-300 border border-gray-300 rounded-l px-3 py-2"><i class="fa-solid fa-lock"></i></span>
+                <input class="border border-gray-300 rounded-r p-2 w-full" type="text">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text-right">
+            <a href="./form-2.html" class="bg-govgreen text-white px-6 py-3 rounded shadow hover:bg-green-700">
+              Επόμενο
+              <i class="fa-solid fa-greater-than"></i>
+            </a>
+          </div>
+
+        </form>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <footer class="bg-lightgrey-300 border-t-4 border-bluegov mt-10">
+    <div class="px-4 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-center md:text-left mb-4 md:mb-0">
+          <p>
+            <a href="#">Όροι και προϋποθέσεις</a>
+          </p>
+
+          <p>
+            Υλοποίηση για το
+            <a href="#">Υπουργείο Ψηφιακής Διακυβέρνησης</a>
+          </p>
+        </div>
+
+        <div>
+          <img class="h-20 w-auto" src="../images/government-logo2.svg" alt="gov logo">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

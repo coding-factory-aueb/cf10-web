@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gov App Tailwind</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style type="text/tailwindcss">
+    @theme{
+      --color-gov:#003475;
+      --color-bluegov: #083AA9;
+      --color-govgreen: #006736;
+      --color-lightgrey-300: #cdccce;
+    }
+  </style>
+
+  <link rel="stylesheet" href="./styles/style.css">  
+</head>
+
+<body>
+
+  <header class="bg-gov border-b-4 border-bluegov">
+    <div class="w-full px-4">
+      <div class="flex justify-between items-center py-2">
+
+        <img class="h-24 w-auto" src="./images/gov_gr-thumb-540.png" alt="gov">
+
+        <nav>
+          <ul class="flex items-center gap-6 text-white">
+            <li>
+              <span class="border border-white rounded p-2">
+                <i class="fa-solid fa-bars"></i>
+              </span>
+            </li>
+
+            <li>
+              <span>ΜΕΝΕΛΑΟΣ ΓΟΥΛΑΝΔΡΗΣ</span>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="mt-10 px-4 min-h-screen">
+    <div>
+      <img src="./images/logo_el.png" alt="logo" class="h-32 w-auto mx-auto">
+    </div>
+
+    <section class="mt-6">
+      <h1 class="text-center text-2xl font-semibold mb-4">
+        Εφαρμογή Δήλωσης Καθαρισμού Οικοπέδων
+      </h1>
+
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Et recusandae, reprehenderit cum error similique vitae.
+      </p>
+
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nihil, maxime maiores nobis autem quam voluptas quasi.
+      </p>
+
+      <div class="text-center mt-6">
+        <a class="bg-govgreen text-white py-3 px-6 rounded shadow hover:bg-green-700" href="./pages/form-1.html">
+          Υποβολή Δήλωσης
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-lightgrey-300 border-t-4 border-bluegov mt-10">
+    <div class="px-4 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-center md:text-left mb-4 md:mb-0">
+          <p>
+            <a href="#">Όροι και προϋποθέσεις</a>
+          </p>
+
+          <p>
+            Υλοποίηση για το
+            <a href="#">Υπουργείο Ψηφιακής Διακυβέρνησης</a>
+          </p>
+        </div>
+
+        <div>
+          <img class="h-20 w-auto" src="./images/government-logo2.svg" alt="gov logo">
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
