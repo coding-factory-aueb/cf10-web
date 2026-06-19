@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ενέργειες Πυρασφάλειας</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Tailwind Theme -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-gov: #003475;
+      --color-bluegov: #083AA9;
+      --color-lightgrey300: #cdccce;
+      --color-govgreen: #006736;
+    }
+
+    .stepper {
+      @apply w-10 h-10 rounded-full bg-lightgrey300 text-white flex items-center justify-center font-bold;
+    }
+
+    .active-step {
+      @apply bg-blue-600;
+    }
+  </style>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-white">
+
+  <!-- HEADER -->
+  <header class="bg-gov border-b-4 border-bluegov">
+    <div class="w-full px-4 py-2">
+      <div class="flex justify-between items-center">
+
+        <!-- Logo -->
+        <img src="../images/gov_gr-thumb-540.png" class="h-24 w-auto" />
+
+        <!-- Navigation -->
+        <nav>
+          <ul class="flex items-center gap-6">
+            <li>
+              <span class="border border-white rounded p-2 text-white">
+                <i class="fa-solid fa-bars"></i>
+              </span>
+            </li>
+
+            <li class="text-white flex items-center">
+              <span>ΜΕΝΕΛΑΟΣ ΓΟΥΛΑΝΔΡΗΣ</span>
+              <i class="fa-solid fa-ellipsis-vertical ml-2"></i>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="flex">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-gov text-white p-4 min-h-screen">
+
+      <p class="mb-4">
+        <i class="fa-solid fa-house"></i>
+        <a href="../index.html" class="text-white underline-offset-2 hover:underline">
+          Αρχική
+        </a>
+      </p>
+
+      <p class="mb-2">
+        <i class="fa-solid fa-chevron-down"></i>
+        Δηλώσεις Καθαρισμού
+      </p>
+
+      <p class="ml-4 text-sm">Προβολή Δηλώσεων</p>
+      <p class="ml-4 text-sm text-yellow-400">Υποβολή Δήλωσης</p>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="flex-1 p-6">
+
+      <!-- STEPPER -->
+      <section>
+
+        <h1 class="text-center text-2xl font-semibold mb-8">
+          Υποβολή Δήλωσης Καθαρισμού Οικοπέδου
+        </h1>
+
+        <div class="grid grid-cols-5 items-center text-center mb-10">
+
+          <div>
+            <div class="stepper mx-auto">1</div>
+            <p class="mt-2">Στοιχεία Οικοπέδου</p>
+          </div>
+
+          <div><hr class="border-gray-300"></div>
+
+          <div>
+            <div class="stepper mx-auto">2</div>
+            <p class="mt-2">Στοιχεία Ιδιοκτήτη</p>
+          </div>
+
+          <div><hr class="border-gray-300"></div>
+
+          <div>
+            <div class="stepper active-step mx-auto">3</div>
+            <p class="mt-2">Ενέργειες Πυρασφάλειας</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- TITLE -->
+      <h2 class="text-center text-xl font-semibold mb-4">
+        Δήλωση εκτέλεσης απαιτούμενων ενεργειών
+      </h2>
+
+      <div class="bg-gray-200 text-gray-800 p-3 rounded mb-6">
+        Παρακαλώ δηλώστε τις ενέργειες που εκτελέσατε
+      </div>
+
+      <!-- FORM -->
+      <form class="space-y-8">
+
+        <!-- QUESTION BLOCK -->
+        <div>
+          <p class="font-bold mb-2">
+            1) Υλοτομία και απομάκρυνση των ξερών και σπασμένων δέντρων...
+          </p>
+
+          <label class="inline-flex items-center mr-4">
+            <input type="radio" name="q1" checked class="mr-2">
+            ΝΑΙ
+          </label>
+
+          <label class="inline-flex items-center">
+            <input type="radio" name="q1" class="mr-2">
+            ΟΧΙ / ΔΕΝ ΑΠΑΙΤΕΙΤΑΙ
+          </label>
+
+          <textarea rows="4"
+                    class="w-full border border-gray-300 rounded p-2 mt-3">
+Παρατηρήσεις</textarea>
+        </div>
+
+        <!-- DECLARATION -->
+        <div class="flex items-start">
+          <input type="checkbox" checked class="mt-1 mr-2">
+          <label>
+            Δηλώνω υπεύθυνα Lorem ipsum dolor sit amet consectetur adipisicing elit...
+          </label>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="flex justify-between mt-6">
+
+          <a href="./form-2.html"
+             class="bg-govgreen text-white px-6 py-3 rounded shadow hover:bg-green-700 transition inline-flex items-center">
+            <i class="fa-solid fa-less-than mr-2"></i> Πίσω
+          </a>
+
+          <a href="./form-3.html"
+             class="bg-govgreen text-white px-6 py-3 rounded shadow hover:bg-green-700 transition inline-flex items-center">
+            <i class="fa-solid fa-floppy-disk mr-2"></i> Υποβολή
+          </a>
+
+        </div>
+
+      </form>
+
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-lightgrey300 border-t-4 border-bluegov mt-10">
+    <div class="px-4 py-6">
+
+      <div class="flex flex-col md:flex-row justify-between items-center">
+
+        <div class="text-center md:text-left mb-4 md:mb-0">
+          <p><a href="#" class="text-blue-600 underline">Όροι και προϋποθέσεις</a></p>
+          <p>
+            Υλοποίηση για το
+            <a href="#" class="text-blue-600 underline">Υπουργείο Ψηφιακής Διακυβέρνησης</a>
+          </p>
+        </div>
+
+        <div class="text-center md:text-right">
+          <img src="../images/government-logo2.svg" class="h-20 w-auto">
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
