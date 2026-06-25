@@ -65,36 +65,36 @@
 </nav>
 
 <div class="min-h-screen">
-  <div class="bg-white mt-20 w-80 mx-auto">
+  <div class="bg-white mt-20 w-80 mx-auto p-8">
 
-    <h2 class="text-center text-2xl font-bold mt-4 mb-6">Σύνδεση</h2>
+    <h2 class="text-center text-2xl font-bold mb-6">Σύνδεση</h2>
 
     <form>
-      <label>Email</label>
-      <input type="email">
+      <label class="block mb-2">Email</label>
+      <input class="w-full border px-3 py-2 rounded mb-4" type="email">
 
-      <label>Κωδικός</label>
-      <input type="password">
+      <label class="block mb-2">Κωδικός</label>
+      <input class="w-full border px-3 py-2 rounded mb-4" type="password">
 
-      <button>Είσοδος</button>
+      <button class="w-full bg-blue-600 text-white py-2 rounded">Είσοδος</button>
     </form>
 
-    <p>
-      <a href="#">Ξέχασα τον κωδικό</a>
+    <p class="text-center mt-4">
+      <a href="#" onclick="openModal()" class="text-blue-600">Ξέχασα τον κωδικό</a>
     </p>
 
   </div>
 </div>
 
-<div id="modal" class="hidden">
-  <div>
-    <h3>Ανάκτηση Κωδικού</h3>
+<div id="modal" class="hidden fixed inset-0 bg-black bg-black/50">
+  <div class="bg-white p-6 rounded shadow-lg w-80">
+    <h3 class="text-xl font-bold mb-4">Ανάκτηση Κωδικού</h3>
 
-    <input type="email" placeholder="Email">
+    <input type="email" placeholder="Email" class="w-full border px-3 py-2 rounded mb-4">
 
-    <div>
-      <button>Κλείσιμο</button>
-      <button>Αποστολή</button>
+    <div class="flex justify-end space-x-2 ">
+      <button onclick="closeModal()" class="px-4 py-2 bg-gray-300 rounded">Κλείσιμο</button>
+      <button class="px-4 py-2 bg-blue-600 text-white rounded">Αποστολή</button>
     </div>
   </div>
 </div>
@@ -102,5 +102,14 @@
 <footer class="bg-gray-800 text-white text-center py-4 mt-10">
   © 2026 MyShop — All rights reserved
 </footer>
+<script>
+  function openModal() {
+    document.getElementById('modal').classList.remove('hidden');
+  }
+
+  function closeModal(){
+    document.getElementById('modal').classList.add("hidden");
+  }
+</script>
 </body>
 </html>

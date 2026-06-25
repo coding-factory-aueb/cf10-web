@@ -8,35 +8,77 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="bg-gray-300">
 
-<nav>
-  <div>
-    <a href="index.html">MyShop</a>
+<nav class="bg-blue-700 text-white">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center" >
 
+    <!-- Logo -->
+    <a href="index.html" class="text-xl font-bold">MyShop</a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-yellow-300">Αρχική</a>
+      <a href="login.html" class="hover:text-yellow-300">Σύνδεση</a>
+      <a href="products.html" class="hover:text-yellow-300">Προϊόντα</a>
+      
+      <div class="group">
+        <button>
+          Άλλο
+          <span><i class="fa-solid fa-angle-down"></i></span>
+        </button>
+
+        <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block w-40 z-50">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Πληροφορίες</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Επικοινωνία</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="menuBtn" class="md:hidden text-3xl">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-blue-600 px-4 pb-4 space-y-2">
+    <a href="index.html" class="block hover:text-yellow-300">Αρχική</a>
+    <a href="login.html" class="block hover:text-yellow-300">Σύνδεση</a>
+    <a href="products.html" class="block hover:text-yellow-300">Προϊόντα</a>
+    
     <div>
-      <a href="index.html">Αρχική</a>
-      <a href="login.html">Σύνδεση</a>
-      <a href="products.html">Προϊόντα</a>
+      <button onclick="toggleMobileDropdown()">
+        Άλλο
+        <span>▼</span>
+      </button>
+
+      <div id="mobileDropdown" class="hidden ml-4 mt-2 space-y-1">
+        <a href="#" class="block hover:text-yellow-300">Πληροφορίες</a>
+        <a href="#" class="block hover:text-yellow-300">Επικοινωνία</a>
+      </div>
     </div>
   </div>
 </nav>
 
-<div>
-  <h1>Προϊόντα</h1>
+<div class="max-w-6xl mx-auto mt-10">
+  <h1 class="text-3xl font-bold text-center mb-10">Προϊόντα</h1>
 
-  <div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <div>
-      <img src="https://picsum.photos/400/250?1">
-      <div>
-        <h3>Προϊόν 1</h3>
-        <p>Περιγραφή προϊόντος.</p>
-        <button>Λεπτομέρειες</button>
+    <div class="bg-white shadow rounded">
+      <img src="https://picsum.photos/400/250?1" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Προϊόν 1</h3>
+        <p class="text-gray-600">Περιγραφή προϊόντος.</p>
+        <button onclick="openProduct()" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded">Λεπτομέρειες</button>
       </div>
     </div>
 
-    <div>
+    <div class="bg-white shadow rounded">
       <img src="https://picsum.photos/400/250?2">
       <div>
         <h3>Προϊόν 2</h3>
@@ -45,32 +87,41 @@
       </div>
     </div>
 
-    <div>
+    <div class="bg-white shadow rounded">
       <img src="https://picsum.photos/400/250?3">
       <div>
         <h3>Προϊόν 3</h3>
         <p>Περιγραφή προϊόντος.</p>
-        <button>Λεπτομέρειες</button>
+        <button onclick="openProduct()">Λεπτομέρειες</button>
       </div>
     </div>
 
   </div>
 </div>
 
-<div id="productModal">
-  <div>
-    <h3>Λεπτομέρειες Προϊόντος</h3>
+<div id="productModal" class="hidden fixed inset-0 bg-black bg-black/50">
+  <div class="bg-white p-6 rounded shadow-lg max-w-xl">
+    <h3 class="text-2xl font-bold mb-4">Λεπτομέρειες Προϊόντος</h3>
 
     <img src="https://picsum.photos/800/400">
 
-    <p>Αναλυτική περιγραφή προϊόντος...</p>
+    <p class="text-gray-700 mb-4">Αναλυτική περιγραφή προϊόντος...</p>
 
-    <div>
-      <button onclick="closeProduct()">Κλείσιμο</button>
-      <button>Προσθήκη στο καλάθι</button>
+    <div class="flex justify-end space-x-2">
+      <button class="px-4 py-2 bg-gray-300 rounded" onclick="closeProduct()">Κλείσιμο</button>
+      <button class="px-4 py-2 rounded bg-blue-600 text-white">Προσθήκη στο καλάθι</button>
     </div>
   </div>
 </div>
 
+<script>
+  function openProduct(){
+    console.log("lalakis");
+    document.getElementById('productModal').classList.remove('hidden');
+  }
+  function closeProduct() {
+    document.getElementById('productModal').classList.add('hidden')
+  }
+</script>
 </body>
 </html>
