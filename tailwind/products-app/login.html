@@ -8,24 +8,66 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="bg-gray-200">
 
-<nav>
-  <div>
-    <a href="index.html">MyShop</a>
+<nav class="bg-blue-700 text-white">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center" >
 
+    <!-- Logo -->
+    <a href="index.html" class="text-xl font-bold">MyShop</a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-yellow-300">Αρχική</a>
+      <a href="login.html" class="hover:text-yellow-300">Σύνδεση</a>
+      <a href="products.html" class="hover:text-yellow-300">Προϊόντα</a>
+      
+      <div class="group">
+        <button>
+          Άλλο
+          <span><i class="fa-solid fa-angle-down"></i></span>
+        </button>
+
+        <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block w-40 z-50">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Πληροφορίες</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Επικοινωνία</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="menuBtn" class="md:hidden text-3xl">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-blue-600 px-4 pb-4 space-y-2">
+    <a href="index.html" class="block hover:text-yellow-300">Αρχική</a>
+    <a href="login.html" class="block hover:text-yellow-300">Σύνδεση</a>
+    <a href="products.html" class="block hover:text-yellow-300">Προϊόντα</a>
+    
     <div>
-      <a href="index.html">Αρχική</a>
-      <a href="login.html">Σύνδεση</a>
-      <a href="products.html">Προϊόντα</a>
+      <button onclick="toggleMobileDropdown()">
+        Άλλο
+        <span>▼</span>
+      </button>
+
+      <div id="mobileDropdown" class="hidden ml-4 mt-2 space-y-1">
+        <a href="#" class="block hover:text-yellow-300">Πληροφορίες</a>
+        <a href="#" class="block hover:text-yellow-300">Επικοινωνία</a>
+      </div>
     </div>
   </div>
 </nav>
 
-<div>
-  <div>
+<div class="min-h-screen">
+  <div class="bg-white mt-20 w-80 mx-auto">
 
-    <h2>Σύνδεση</h2>
+    <h2 class="text-center text-2xl font-bold mt-4 mb-6">Σύνδεση</h2>
 
     <form>
       <label>Email</label>
@@ -44,7 +86,7 @@
   </div>
 </div>
 
-<div id="modal">
+<div id="modal" class="hidden">
   <div>
     <h3>Ανάκτηση Κωδικού</h3>
 
@@ -57,5 +99,8 @@
   </div>
 </div>
 
+<footer class="bg-gray-800 text-white text-center py-4 mt-10">
+  © 2026 MyShop — All rights reserved
+</footer>
 </body>
 </html>
