@@ -65,36 +65,39 @@
   </div>
 </nav>
 
-<div>
-  <div id="carousel">
-    <img src="https://picsum.photos/1200/400?1">
-    <img src="https://picsum.photos/1200/400?2">
+<!-- Carousel -->
+<div class="relative w-full overflow-hidden">
+  <div id="carousel" class="whitespace-nowrap">
+    <img class="inline-block w-full" src="https://picsum.photos/1200/400?1">
+    <img class="inline-block w-full" src="https://picsum.photos/1200/400?2">
   </div>
 
-  <button>‹</button>
-  <button>›</button>
+  <button onclick="prevSlide()" class="absolute left-4 top-1/2 bg-white p-2 rounded-full shadow">‹</button>
+  <button onclick="nextSlide()" class="absolute right-4 top-1/2 bg-white p-2 rounded-full shadow">›</button>
 </div>
 
-<div>
-  <button>
+<!-- Collapse -->
+<div class="max-w-4xl mx-auto text-center mt-10">
+  <button onclick="toggleInfo()" class="bg-gray-700 text-white px-4 py-2 rounded">
     Περισσότερα
   </button>
 
-  <div id="infoBox">
+  <div id="infoBox" class="hidden mt-4 bg-gray-400 p-4 shadow rounded">
     Εδώ μπορείτε να βρείτε πληροφορίες για το κατάστημα.
   </div>
 </div>
 
-<div>
-  <button>
+<!-- Tootip -->
+<div class="max-w-4xl mx-auto mt-10 text-center">
+  <button class="group">
     Hover me
-    <span>
+    <span class="hidden group-hover:block">
       Tooltip!
     </span>
   </button>
 </div>
 
-<footer>
+<footer class="bg-gray-800 text-white text-center py-4 mt-10">
   © 2026 MyShop — All rights reserved
 </footer>
 
@@ -105,6 +108,25 @@
 
   function toggleMobileDropdown(){
     document.getElementById('mobileDropdown').classList.toggle("hidden");
+  }
+</script>
+<script>
+  let index=0;
+  function showSlide() {
+    document.getElementById("carousel").style.transform = `translateX(-${index * 100}%)`;
+  }
+  function nextSlide() { 
+    index = (index+1)%2; 
+    showSlide();  
+  }
+
+  function prevSlide(){
+    index = (index-1+2)%2;
+    showSlide();
+  }
+
+  function toggleInfo() {
+    document.getElementById("infoBox").classList.toggle('hidden')
   }
 </script>
 </body>
