@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="bg-blue-700 text-white">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center" >
+
+    <!-- Logo -->
+    <a href="index.html" class="text-xl font-bold">MyShop</a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-yellow-300">Αρχική</a>
+      <a href="login.html" class="hover:text-yellow-300">Σύνδεση</a>
+      <a href="products.html" class="hover:text-yellow-300">Προϊόντα</a>
+      
+      <div class="group">
+        <button>
+          Άλλο
+          <span><i class="fa-solid fa-angle-down"></i></span>
+        </button>
+
+        <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block w-40 z-50">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Πληροφορίες</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Επικοινωνία</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="menuBtn" class="md:hidden text-3xl">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+  </div>
+
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-blue-600 px-4 pb-4 space-y-2">
+    <a href="index.html" class="block hover:text-yellow-300">Αρχική</a>
+    <a href="login.html" class="block hover:text-yellow-300">Σύνδεση</a>
+    <a href="products.html" class="block hover:text-yellow-300">Προϊόντα</a>
+    
+    <div>
+      <button onclick="toggleMobileDropdown()">
+        Άλλο
+        <span>▼</span>
+      </button>
+
+      <div id="mobileDropdown" class="hidden ml-4 mt-2 space-y-1">
+        <a href="#" class="block hover:text-yellow-300">Πληροφορίες</a>
+        <a href="#" class="block hover:text-yellow-300">Επικοινωνία</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div>
+  <div id="carousel">
+    <img src="https://picsum.photos/1200/400?1">
+    <img src="https://picsum.photos/1200/400?2">
+  </div>
+
+  <button>‹</button>
+  <button>›</button>
+</div>
+
+<div>
+  <button>
+    Περισσότερα
+  </button>
+
+  <div id="infoBox">
+    Εδώ μπορείτε να βρείτε πληροφορίες για το κατάστημα.
+  </div>
+</div>
+
+<div>
+  <button>
+    Hover me
+    <span>
+      Tooltip!
+    </span>
+  </button>
+</div>
+
+<footer>
+  © 2026 MyShop — All rights reserved
+</footer>
+
+<script>
+  document.getElementById("menuBtn").onclick = () => {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  }
+
+  function toggleMobileDropdown(){
+    document.getElementById('mobileDropdown').classList.toggle("hidden");
+  }
+</script>
+</body>
+</html>
