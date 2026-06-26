@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+  <style type="text/tailwindcss">
+    @theme{
+      --color-primary: #006994;
+      --font-poiret: 'Poiret One', sans-serif
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-(--color-primary) border-b border-gray-700 z-50">
+    <div class="w-full lg:max-w-7xl mx-auto px-4">
+      
+      <div class="flex justify-between items-center h-16">
+
+        <a class="text-white text-3xl font-bold font-(family-name:--font-poiret)" href="">Corfu Guide</a>
+
+        <button id="menuBtn" class="lg:hidden text-white text-2xl">
+          <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-10">
+
+          <div class="relative group">
+            <button class="text-white text-lg">Το Νησί</button>
+            <div class="absolute hidden bg-white mt-2 rounded shadow-lg group-hover:block">
+              <a class="block w-25 px-4 py-2 hover:border-gray-200" href="#">Option 1</a>
+              <a class="block w-25 px-4 py-2 hover:border-gray-200" href="#">Option 2</a>
+            </div>
+          </div>
+
+          <div class="group">
+            <button class="text-white text-lg">Πολιτισμός</button>
+            <div class="absolute hidden bg-white mt-2 rounded shadow-lg group-hover:block w-25 z-60">
+              <a class="block px-4 py-2 hover:border-gray-200" href="#">Option 1</a>
+              <a class="block px-4 py-2 hover:border-gray-200" href="#">Option 2</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button class="text-white text-lg">Σημειωματάριο</button>
+            <div class="absolute hidden bg-white mt-2 rounded shadow-lg group-hover:block">
+              <a class="block w-25 px-4 py-2 hover:border-gray-200" href="#">Option 1</a>
+              <a class="block w-25 px-4 py-2 hover:border-gray-200" href="#">Option 2</a>
+              <a class="block w-25 px-4 py-2 hover:border-gray-200" href="#">Option 3</a>
+            </div>
+          </div>
+
+          <a class="text-white text-lg" href="#">Ομιλείτε Κερκυραϊκά</a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden lg:hidden pb-4" >
+        <a class="block text-white py-2" href="">Πολιτισμός</a>
+        <a class="block text-white py-2" href="">Σημειωματάριο</a>
+        <a class="block text-white py-2" href="">Ομιλείτε Κερκυραϊκά</a>
+        <a class="block text-white py-2" href="">Το Νησί</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-orange-500 min-h-[50vh] bg-[url('https://picsum.photos/700/400')] bg-cover bg-center bg-fixed flex items-center">
+    <div class="w-full lg:max-w-5xl mx-auto text-center text-black bg-gray-200/50 px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Lorem ipsum dolor sit amet consectetur</h1>
+
+      <p class="text-xl font-semibold">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quod aliquid inventore repellendus quae. Debitis, ullam consectetur! Quasi ab, repellendus beatae magni quidem labore reprehenderit maxime architecto molestias eos tempora!
+      </p>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="py-20">
+    <section class="w-full lg:max-w-5xl mx-auto px-4">
+      <h3 class="text-center text-2xl font-semibold mb-6">My text text text</h3>
+      
+      <p class="text-lg text-justify">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis modi nobis iusto recusandae iure cum accusamus. Repellendus nihil quis magnam soluta neque in aspernatur maiores numquam, accusantium ex ratione aliquid!
+      </p>
+    </section>
+  </main>
+
+  <!-- Divider -->
+  <div class="max-w-xs mx-auto border-t-4 border-(--color-primary)"></div>
+
+  <!-- Album -->
+  <section class="mt-20">
+
+    <div class="w-full lg:max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="relative flex items-center justify-center">
+          <img class="rounded-xl object-cover" src="https://picsum.photos/300/300" alt="picsum photos">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <a class="text-2xl font-bold text-white bg-gray-200/50" href="">Text 1</a>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-center">
+          <img class="rounded-xl" src="https://picsum.photos/300/300" alt="picsum photos">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <a class="text-2xl font-bold text-white bg-gray-200/50" href="">Text 2</a>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-center">
+          <img class="rounded-xl" src="https://picsum.photos/300/300" alt="picsum photos">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <a class="text-2xl font-bold text-white bg-gray-200/50" href="">Text 3</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-900 mt-20 text-white">
+    <div class="w-full lg:max-w-6xl mx-auto py-12 text-center px-4 space-y-4">
+      <p>Copyright @Corfu Guide. All rights reserved 2026</p>
+
+      <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima possimus et sed</p>
+
+      <div class="text-3xl">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<!-- Mobile menu script  -->
+<script>
+  const btn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  })
+</script>
+</body>
+</html>
